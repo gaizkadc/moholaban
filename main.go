@@ -8,17 +8,18 @@ import (
 
 const (
 	separator             = "---"
-	superSeparator        = "==="
+	superSeparator        = "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 	minTopicsPerParagraph = 2
 	maxTopicsPerParagraph = 4
-	minParagraphs         = 3
-	maxParagraphs         = 7
+	minParagraphs         = 2
+	maxParagraphs         = 5
 )
 
 func main() {
 	songs := getSongs()
 
 	var result []string
+	result = append(result, superSeparator)
 
 	for _, song := range songs {
 		result = append(result, song)

@@ -9,6 +9,7 @@ import (
 const (
 	separator             = "---"
 	superSeparator        = "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+	blankLine             = "\n"
 	minTopicsPerParagraph = 2
 	maxTopicsPerParagraph = 4
 	minParagraphs         = 2
@@ -59,6 +60,8 @@ func getTopics() []string {
 
 		if i != numberOfParagraphs-1 {
 			result = append(result, separator)
+		} else {
+			result = append(result, blankLine)
 		}
 	}
 
